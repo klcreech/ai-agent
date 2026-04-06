@@ -1,0 +1,17 @@
+### INSTRUCTIONS ###
+
+Analyze the logs and output ONLY this format:
+
+Distro Detected: <name>
+Error: <short summary>
+Cause: <technical explanation>
+Fix: <clear commands or steps>
+
+RULES:
+- Focus on real failures (systemd, services, login, bluetooth)
+- Ignore ACPI, firmware, and kernel noise
+- Do NOT suggest kernel or firmware modifications
+- Be concise and technical
+- No extra text outside the format
+
+### ANALYSIS ###
