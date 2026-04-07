@@ -4,12 +4,12 @@ This agent inspects your logs, looks for errors, finds solutions, requests to ma
 
 <div align="center">
 
-![Autonomous AI Agents](https://img.shields.io/badge/Autonomous-AI_Agents-00E5FF?style=flat-square)
-![Agent Lifecycle Design](https://img.shields.io/badge/Agent-Lifecycle_Design-00FFFF?style=flat-square)
-![LLM Orchestration](https://img.shields.io/badge/LLM-Orchestration-00BFFF?style=flat-square)
-![Context & System Awareness](https://img.shields.io/badge/Context-System_Awareness-00E5FF?style=flat-square)
-![Local-First AI Systems](https://img.shields.io/badge/Local_First-AI_Systems-00FFFF?style=flat-square)
-![Safe Automation](https://img.shields.io/badge/Execution-Safe_Automation-00BFFF?style=flat-square)
+![Autonomous AI Agents](https://img.shields.io/badge/Autonomous-AI_Agents-00E5FF?style=flat-square&labelColor=00E5FF&color=00E5FF&logoColor=000000)
+![Agent Lifecycle Design](https://img.shields.io/badge/Agent-Lifecycle_Design-00FFFF?style=flat-square&labelColor=00FFFF&color=00FFFF)
+![LLM Orchestration](https://img.shields.io/badge/LLM-Orchestration-00BFFF?style=flat-square&labelColor=00BFFF&color=00BFFF)
+![Context & System Awareness](https://img.shields.io/badge/Context-System_Awareness-00E5FF?style=flat-square&labelColor=00E5FF&color=00E5FF)
+![Local-First AI Systems](https://img.shields.io/badge/Local_First-AI_Systems-00FFFF?style=flat-square&labelColor=00FFFF&color=00FFFF)
+![Safe Automation](https://img.shields.io/badge/Execution-Safe_Automation-00BFFF?style=flat-square&labelColor=00BFFF&color=00BFFF)
 
 </div>
 
