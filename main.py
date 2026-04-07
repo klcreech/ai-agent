@@ -12,7 +12,7 @@ console = Console()
 
 
 def main():
-    console.print(Panel.fit("[bold]ARCHITECT AI AGENT[/bold]", border_style="white"))
+    console.print(Panel.fit("[bold]SYSTEM-LOG AI AGENT[/bold]", border_style="white"))
 
     # 🔍 Phase 1: System Info
     with console.status("[bold]Gathering system telemetry...[/bold]"):
