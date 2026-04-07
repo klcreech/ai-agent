@@ -1,75 +1,80 @@
-# 🤖 Architect AI Agents
+# Autonomous AI Agent — Hardware-in-the-Loop
 
-<p align="center">
-  <img src="https://cdn.simpleicons.org/python/3776AB" width="18"/> Architecting <b>Autonomous AI Agents</b> with <b>Hardware-in-the-Loop Awareness</b><br/>
-  <img src="https://cdn.simpleicons.org/n8n/FF6A00" width="18"/> Engineering <b>Agentic Pipelines</b> & <b>LLM Orchestration</b> for local and cloud workflows<br/>
-  <img src="https://cdn.simpleicons.org/docker/2496ED" width="18"/> Bridging <b>System-Level Discovery</b> with <b>Containerized AI Inference</b>
-</p>
+Architecting autonomous AI agents with real system awareness. This isn't a chatbot wrapper — it's an agent that probes its environment, reasons over what it finds, and takes action. Built for local and cloud workflows, it bridges the gap between LLM reasoning and actual system state.
 
-<p align="center">
-  <a href="https://www.linkedin.com/in/kerry-creech/">
-      <img src="https://img.shields.io/badge/LinkedIn-Kerry%20Creech-0A66C2?style=flat-square&logo=linkedin&logoColor=white" />
-  </a>
-  <a href="https://github.com/klcreech">
-      <img src="https://img.shields.io/badge/GitHub-klcreech-181717?style=flat-square&logo=github&logoColor=white" />
-  </a>
-</p>
+<div align="center">
+
+![Autonomous AI Agents](https://img.shields.io/badge/Autonomous-AI_Agents-00E5FF?style=flat-square)
+![Agent Lifecycle Design](https://img.shields.io/badge/Agent-Lifecycle_Design-00FFFF?style=flat-square)
+![LLM Orchestration](https://img.shields.io/badge/LLM-Orchestration-00BFFF?style=flat-square)
+![Context & System Awareness](https://img.shields.io/badge/Context-System_Awareness-00E5FF?style=flat-square)
+![Local-First AI Systems](https://img.shields.io/badge/Local_First-AI_Systems-00FFFF?style=flat-square)
+![Safe Automation](https://img.shields.io/badge/Execution-Safe_Automation-00BFFF?style=flat-square)
+
+</div>
 
 ---
 
-## 🧩 Overview
-This project demonstrates a production-ready **AI Agent lifecycle**. Unlike standard LLM implementations, this agent is **environment-aware**, meaning it probes the host hardware and OS state before making decisions. It is designed to bridge the gap between static LLM reasoning and real-world system administration.
+## 🧩 What it does
 
-### Core Capabilities:
-- **System Telemetry**: Deep discovery of OS, kernel, and hardware metrics.
-- **Diagnostic Reasoning**: Context-aware log analysis using local LLMs.
-- **Automated Remediation**: Generation of validated scripts to fix system service failures.
-- **Local Inference**: Optimized for privacy and speed using Ollama.
+Most LLM implementations are stateless — they know nothing about the machine they're running on. This agent is different. Before it does anything, it reads the environment: OS state, kernel info, hardware metrics, running services. That context becomes the foundation for everything it decides next.
+
+From there it can diagnose failing services, analyze logs, generate remediation scripts, and document its own reasoning — all without leaving the machine. Everything runs locally through Ollama, so no data goes anywhere it shouldn't.
+
+- **System Telemetry** — deep discovery of OS, kernel, and hardware metrics
+- **Diagnostic Reasoning** — context-aware log analysis using local LLMs
+- **Automated Remediation** — generates validated Bash scripts to fix service failures
+- **Local Inference** — privacy-first, optimized for speed with Ollama
 
 ---
 
-## 🗂️ Project Structure
-
-```bash
+## 🗂️ Project structure
+```text
 ai-agents/
-└── agent-ai/
-    ├── main.py          # Orchestrator: Coordinates telemetry, analysis, and remediation
-    ├── agent.py         # LLM Interface: Logic for prompt engineering & Ollama interaction
-    ├── system_info.py   # Telemetry: Probes CPU, RAM, and Systemd service states
-    ├── analyze.txt      # Agent Output: Stores the reasoning and diagnostic history
-    ├── setup.sh         # Automation: One-click environment & model setup
-    └── requirements.txt # Dependencies: psutil, ollama, and core Python libs
-⚙️ How it Works
-Observe: system_info.py extracts real-time telemetry (e.g., "Is nginx failing? Is the CPU at 99%?").
+├── main.py          # Orchestrator — coordinates telemetry, analysis, and remediation
+├── agent.py         # LLM interface — prompt engineering and Ollama interaction
+├── system_info.py   # Telemetry — probes CPU, RAM, and systemd service states
+├── analyze.txt      # Agent output — reasoning and diagnostic history
+├── setup.sh         # One-click environment and model setup
+└── requirements.txt # Dependencies
+```
 
-Think: The orchestrator sends this hardware context to the LLM with a specialized "System Admin" prompt.
+---
 
-Plan: The agent analyzes the logs in agent.py and determines if a fix is necessary.
+## ⚙️ How it works
 
-Act: The agent generates a precise Bash script for remediation, documented in analyze.txt.
+**Observe** — `system_info.py` pulls real-time telemetry. Is nginx failing? Is CPU pegged at 99%? It knows before anything else runs.
 
-🚀 Getting Started
-1. Prerequisites
-You must have Ollama installed and the qwen2.5-coder model available (the setup script can handle the model pull).
+**Think** — The orchestrator packages that hardware context into a specialized system admin prompt and hands it to the LLM.
 
-2. Installation
-Bash
+**Plan** — `agent.py` analyzes the data and determines whether intervention is needed and what form it should take.
+
+**Act** — The agent produces a precise Bash remediation script, logged to `analyze.txt` for review before anything executes.
+
+---
+
+## 🚀 Getting started
+
+Prerequisites: Ollama installed with the `qwen2.5-coder` model available. The setup script can handle the model pull if needed.
+```bash
 # Clone the repository
-git clone [https://github.com/klcreech/ai-agent.git](https://github.com/klcreech/ai-agent.git)
-cd ai-agent/agent-ai
+git clone https://github.com/klcreech/ai-agent.git
+cd ai-agents
 
-# Run the automated setup (creates venv and installs deps)
+# Run automated setup (creates venv and installs dependencies)
 bash setup.sh
-3. Execution
-Bash
-# Activate the virtual environment
+
+# Activate and run
 source venv/bin/activate
-
-# Run the AI Agent
 python main.py
-💡 Engineering Highlights
-Modular Architecture: Logic is decoupled, allowing the agent to be ported to different OS environments easily.
+```
 
-Safety First: Remediation scripts are presented for review, demonstrating a "Human-in-the-Loop" safety pattern for AI automation.
+---
 
-Local-First: No data leaves the machine. All inference is handled by the local hardware.
+## 💡 Engineering notes
+
+**Modular by design** — telemetry, reasoning, and execution are fully decoupled. Porting to a different OS environment means swapping one module, not rewriting the whole thing.
+
+**Human-in-the-loop safety** — remediation scripts are surfaced for review before execution. The agent can recommend, but a human confirms. That's intentional.
+
+**Local-first** — all inference runs on-device. Nothing leaves the machine.
