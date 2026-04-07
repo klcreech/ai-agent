@@ -30,7 +30,7 @@ From there it can diagnose failing services, analyze logs, generate remediation 
 
 ## ⚙️ Project structure
 ```text
-ai-agent/
+System-Log-AI-Agent/
 ├── main.py          # Orchestrator — coordinates telemetry, analysis, and remediation
 ├── agent.py         # LLM interface — prompt engineering and Ollama interaction
 ├── system_info.py   # Telemetry — probes CPU, RAM, and systemd service states
