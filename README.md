@@ -15,7 +15,7 @@ Architecting autonomous AI agents with real system awareness. This isn't a chatb
 
 ---
 
-## 🧩 What it does
+## ⚙️ What it does
 
 Most LLM implementations are stateless — they know nothing about the machine they're running on. This agent is different. Before it does anything, it reads the environment: OS state, kernel info, hardware metrics, running services. That context becomes the foundation for everything it decides next.
 
@@ -28,7 +28,7 @@ From there it can diagnose failing services, analyze logs, generate remediation 
 
 ---
 
-## 🗂️ Project structure
+## ⚙️ Project structure
 ```text
 ai-agents/
 ├── main.py          # Orchestrator — coordinates telemetry, analysis, and remediation
@@ -53,7 +53,7 @@ ai-agents/
 
 ---
 
-## 🚀 Getting started
+## ⚙️ Getting started
 
 Prerequisites: Ollama installed with the `qwen2.5-coder` model available. The setup script can handle the model pull if needed.
 ```bash
@@ -71,7 +71,7 @@ python main.py
 
 ---
 
-## 💡 Engineering notes
+## ⚙️ Engineering notes
 
 **Modular by design** — telemetry, reasoning, and execution are fully decoupled. Porting to a different OS environment means swapping one module, not rewriting the whole thing.
 
