@@ -13,6 +13,8 @@ This agent inspects your logs, looks for errors, finds solutions, requests to ma
 
 </div>
 
+![System Log AI Agent Screenshot](https://raw.githubusercontent.com/klcreech/klcreech/main/assets/header/System-Log-AI-Agent%20Screenshot.png)
+
 ---
 
 ## ⚙️ What it does
