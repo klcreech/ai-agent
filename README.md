@@ -30,7 +30,7 @@ From there it can diagnose failing services, analyze logs, generate remediation 
 
 ## ⚙️ Project structure
 ```text
-ai-agents/
+ai-agent/
 ├── main.py          # Orchestrator — coordinates telemetry, analysis, and remediation
 ├── agent.py         # LLM interface — prompt engineering and Ollama interaction
 ├── system_info.py   # Telemetry — probes CPU, RAM, and systemd service states
@@ -58,7 +58,7 @@ ai-agents/
 Prerequisites: Ollama installed with the `qwen2.5-coder` model available. The setup script can handle the model pull if needed.
 ```bash
 # Clone the repository
-git clone https://github.com/klcreech/ai-agent.git
+git clone https://github.com/klcreech/System-Log-AI-Agent.git
 cd ai-agents
 
 # Run automated setup (creates venv and installs dependencies)
