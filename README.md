@@ -1,6 +1,6 @@
-# Autonomous AI Agent — Hardware-in-the-Loop
+markdown# System Log AI Agent
 
-Architecting autonomous AI agents with real system awareness. This isn't a chatbot wrapper — it's an agent that probes its environment, reasons over what it finds, and takes action. Built for local and cloud workflows, it bridges the gap between LLM reasoning and actual system state.
+This agent inspects your logs, looks for errors, finds solutions, requests to make a bash file, and asks if you want to execute it. V1.0.0 is the foundation I'll build upon to focus on standalone machine AI agents.
 
 <div align="center">
 
