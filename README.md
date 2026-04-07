@@ -1,4 +1,4 @@
-markdown# System Log AI Agent
+## System Log AI Agent
 
 This agent inspects your logs, looks for errors, finds solutions, requests to make a bash file, and asks if you want to execute it. V1.0.0 is the foundation I'll build upon to focus on standalone machine AI agents.
 
